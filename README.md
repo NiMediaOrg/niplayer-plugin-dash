@@ -1,0 +1,2 @@
+# niplayer-plugin-dash
+NiPlayer视频播放器的dash流插件，安装此插件可以使得NiPlayer播放器支持dash流媒体协议
