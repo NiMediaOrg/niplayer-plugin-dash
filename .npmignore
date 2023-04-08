@@ -1,0 +1,8 @@
+/example/
+/node_modules/
+/package/
+.gitignore
+.npmignore
+pnpm-lock.yaml
+rollup.config.js
+tsconfig.json
