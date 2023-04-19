@@ -1,7 +1,7 @@
 {
   "name": "niplayer-plugin-dash",
-  "version": "1.0.0",
-  "description": "",
+  "version": "1.0.1",
+  "description": "dash, plugin",
   "main": "./dist/niplayer-plugin-dash.esm.js",
   "types": "./dist/index.d.ts",
   "type": "module",
@@ -24,6 +24,6 @@
   },
   "dependencies": {
     "dashjs": "^4.6.0",
-    "niplayer": "link:.."
+    "niplayer": "^1.4.3"
   }
 }
