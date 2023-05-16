@@ -1,10 +1,12 @@
-import { DOMProps, Options, Plugin, addClass, EVENT, Toast, $ } from "niplayer";
+import { DOMProps, Options, addClass, EVENT, Toast, $ } from "niplayer";
 import type Player from "niplayer"
+import type { Plugin } from "niplayer"
 import dashjs,{ BitrateInfo, MediaPlayerClass } from "dashjs"
 import { ResolutionMenu } from "./menu";
 import { Loading } from "./component/Loading";
 
 import "./index.less"
+//TODO 构造一个分辨率组件
 class Resolution extends Options {
     readonly id = "Resolution";
     private dashPlayer: MediaPlayerClass;
@@ -43,6 +45,7 @@ class Resolution extends Options {
             new ResolutionMenu(this.player, this.dashPlayer, this.hideBox);
         })
 
+        //TODO 发生分辨率栏的点击事件后触发回调函数
         this.player.on("videoItemClick", (quality: string) => {
             (this.icon as HTMLElement).innerText = quality;
             if(quality !== "Auto Switch") {
@@ -50,7 +53,7 @@ class Resolution extends Options {
             }
         })
 
-        // 监听媒体质量发生变化的事件
+        //TODO 监听媒体质量发生变化的事件
         this.player.on("qualityChanged",(newQuality: BitrateInfo) => {
             console.log("媒体质量发生变化",newQuality);
             self.dashLoading && self.dashLoading.dispose();

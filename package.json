@@ -6,7 +6,6 @@
   "types": "./dist/index.d.ts",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rollup -c rollup.config.js"
   },
   "keywords": [],
@@ -17,13 +16,13 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-typescript": "^11.1.0",
     "autoprefixer": "^10.4.14",
+    "niplayer": "^1.4.3",
     "rollup": "^3.20.2",
     "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.5.0",
     "typescript": "^5.0.3"
   },
   "dependencies": {
-    "dashjs": "^4.6.0",
-    "niplayer": "^1.4.3"
+    "dashjs": "^4.6.0"
   }
 }
