@@ -6,11 +6,10 @@
     display: flex;
     justify-content: space-around;
     border-radius: 8px;
-    transition: all 1s ease;
+    transition: all .5s ease;
     position: absolute;
     left: 10px;
     bottom: 60px;
-    animation: swing 1s ease-in-out infinite;
     .dash-loading-message {
         font-size: 14px;
         color: #fff;
@@ -19,27 +18,6 @@
 
 .dash-loading-hidden {
     opacity: 0;
-}
-
-@keyframes swing {
-    0% {
-        transform: rotate(0);
-    }
-
-    25% {
-
-        transform: rotate(15deg);
-    }
-
-    50% {
-        transform: rotate(0deg);
-    }
-
-    75% {
-        transform: rotate(-15deg);
-    }
-
-    100% {
-        transform: rotate(0);
-    }
+    height: 0;
+    width: 0;
 }

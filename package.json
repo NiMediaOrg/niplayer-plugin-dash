@@ -1,7 +1,7 @@
 {
   "name": "niplayer-plugin-dash",
-  "version": "1.0.1",
-  "description": "dash, plugin",
+  "version": "1.1.0",
+  "description": "dash, plugin, niplayer, danmaku",
   "main": "./dist/niplayer-plugin-dash.esm.js",
   "types": "./dist/index.d.ts",
   "type": "module",
@@ -16,13 +16,15 @@
     "@rollup/plugin-node-resolve": "^15.0.2",
     "@rollup/plugin-typescript": "^11.1.0",
     "autoprefixer": "^10.4.14",
-    "niplayer": "^1.4.3",
+    "postcss": "^8.4.24",
+    "postcss-pxtorem": "^6.0.0",
     "rollup": "^3.20.2",
     "rollup-plugin-postcss": "^4.0.2",
     "tslib": "^2.5.0",
     "typescript": "^5.0.3"
   },
   "dependencies": {
-    "dashjs": "^4.6.0"
+    "dashjs": "^4.6.0",
+    "niplayer": "^1.4.6"
   }
 }

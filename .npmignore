@@ -1,5 +1,5 @@
 /example/
-/node_modules/
+node_modules
 /package/
 .gitignore
 .npmignore
