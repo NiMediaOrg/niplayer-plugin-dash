@@ -1,11 +1,11 @@
-import { Options, $, addClass, EVENT, Toast } from "niplayer";
-import type Player from "niplayer"
-import type { Plugin,DOMProps } from "niplayer"
-import dashjs, { BitrateInfo, MediaPlayerClass } from "dashjs"
+import { Options, EVENT, Toast } from "niplayer";
+import type Player from "niplayer";
+import type { Plugin, DOMProps } from "niplayer";
+import dashjs, { BitrateInfo, MediaPlayerClass } from "dashjs";
 import { ResolutionMenu } from "./component/menu";
 import Event from "./event";
-import { Loading } from "./component/Loading";
-import "./index.less"
+import { Loading } from "./component/loading";
+import "./index.less";
 
 //TODO 构造一个分辨率组件
 class Resolution extends Options {
@@ -30,7 +30,7 @@ class Resolution extends Options {
     }
 
     initTemplate(): void {
-        addClass(this.el,["video-controller","video-resolution"])
+        this.el.classList.add("video-controller","video-resolution")
         let resolve = document.createElement("div");
         resolve.innerText = "画质"
         this.icon = resolve;
@@ -59,7 +59,8 @@ class Resolution extends Options {
         this.player.on(Event.QUALITY_CHANGED,(newQuality: BitrateInfo) => {
             console.log("媒体质量发生变化",newQuality);
             this.dashLoading && this.dashLoading.dispose();
-            let dom = $("div.video-resolution-toast");
+            let dom = document.createElement("div")
+            dom.classList.add("video-resolution-toast")
             dom.innerText = `成功切换到${newQuality.height}P`;
 
             let toast: Toast = new Toast(this.player,dom)

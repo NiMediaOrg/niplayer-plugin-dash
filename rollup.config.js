@@ -12,7 +12,11 @@ export default defineConfig({
         file: "./dist/niplayer-plugin-dash.esm.js",
         format: "esm"
     },
-    treeshake: true,
+    treeshake: {
+        moduleSideEffects: false,
+        propertyReadSideEffects: false,
+        pureExternalModules: true
+    },
     plugins: [
         ts({
             compilerOptions: {}

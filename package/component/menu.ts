@@ -1,5 +1,4 @@
 import dashjs, { BitrateInfo, MediaPlayerClass } from "dashjs";
-import { $ } from "niplayer";
 import type Player from "niplayer"
 import Event from "../event";
 // dash.js库的配置信息
@@ -69,7 +68,8 @@ export class ResolutionMenu {
 
         // let ul = $("ul.video-resolution-submenu")
         let fragment = document.createDocumentFragment()
-        let auto = $("div.video-resolution-item");
+        let auto = document.createElement("div")
+        auto.classList.add("video-resolution-item")
         auto.innerText = generateContent();
         // @ts-ignore
         auto.onclick = (e: MouseEvent) => {
@@ -82,7 +82,8 @@ export class ResolutionMenu {
         const liList: HTMLElement[] = [];
         for(let item of info) {
             let content = generateContent(item);
-            let li = $("div.video-resolution-item");
+            let li = document.createElement("div")
+            li.classList.add("video-resolution-item")
             li.innerText = content;
             li.onclick = (e: MouseEvent) => {
                 // 关闭自适应算法调整视频的分辨率，该为手动调整
